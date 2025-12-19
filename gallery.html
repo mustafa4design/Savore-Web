@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery – Fine Dining</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+     <nav class="navbar">
+    <div class="logo">SAVORE</div>
+
+    <div class="menu-toggle" id="menuToggle">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <div class="nav-left" id="navLinks">
+        <a href="home.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="menu.html">Menu</a>
+        <a href="gallery.html" class="active">Gallery</a>
+        <a href="contact.html">Contact</a>
+         <a href="reservation.html" class="order-btn">reservation</a>
+    </div>
+</nav>
+
+
+</header>
+    
+    <section class="gallery-section">
+        <h1>Gallery</h1>
+        <p class="subtitle">
+            Step into a visual journey of flavor and craftsmanship. 
+            Our gallery highlights fresh ingredients, handcrafted dishes, and the passion behind every plate. 
+            Each creation tells a story of culinary excellence and memorable dining moments.”
+        </p>
+
+        <div class="divider">
+            <span class="line"></span>
+            <span class="star">✦</span>
+            <span class="line"></span>
+        </div>
+
+        
+        <div class="gallery-grid">
+            <img src="bg7.jpg" alt="Food 1">
+            <img src="bg8.jpg" alt="Food 2">
+            <img src="bg9.jpg" alt="Food 3">
+            <img src="bg11.jpg" alt="Food 4">
+            <img src="bg16.jpg" alt="Food 5">
+            <img src="bg15.jpg" alt="Food 7">
+            <img src="bg12.jpg" alt="Food 8">
+            <img src="bg10.jpg" alt="Food 9">
+            <img src="bg4.jpg" alt="Food 10">
+        </div>
+    </section>
+    <footer>
+        <div class="footer_container">
+            <div class="company_heading">
+                <h2>Company</h2>
+                <a href="#about">About Us</a>
+                <a href="#contact">Contact Us</a>
+                <a href="#reservation">Reservation</a>
+                <a href="#terms">Terms & Condition</a>
+                <a href="#privacy">Privacy Policy</a>
+            </div>
+
+            <div class="Contact_heading">
+                <h2>Contact</h2>
+                <p><i class="fas fa-map-marker-alt"></i> <span>32 Street, Gulshan-e-Iqbal, Block 13, Karachi</span></p>
+                <p><i class="fas fa-phone-alt"></i> <span>+92 111 251 998</span></p>
+                <p><i class="fas fa-envelope"></i> <span>feedback.savoure@gmail.com</span></p>
+                <div class="icons_images">
+                    <a href=""><img src="./facebook-app-symbol.png" alt="Facebook"></a>
+                    <a href=""><img src="./linkedin.png" alt="LinkedIn"></a>
+                    <a href=""><img src="./twitter.png" alt="Twitter"></a>
+                </div>
+            </div>
+
+            <div class="Opening_heading">
+                <h2>Opening</h2>
+                <p><strong>Monday - Saturday</strong></p>
+                <p>9:00 AM - 9:00 PM</p>
+                <br>
+                <p><strong>Sunday</strong></p>
+                <p>11:00 AM - 11:00 PM</p>
+            </div>
+
+            <div class="news_letter">
+                <h2>Newsletter</h2>
+                <form>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <button type="submit" class="signup_btn">Sign Up</button>
+                   
+                </form>
+            </div>
+        </div>
+    </footer>
+
+
+<script>
+    const toggle = document.getElementById("menuToggle");
+    const nav = document.getElementById("navLinks");
+
+    toggle.addEventListener("click", () => {
+        nav.classList.toggle("active");
+    });
+</script>
+
+</body>
+</html>

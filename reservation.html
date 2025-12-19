@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Luxury Restaurant Reservation</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="logo">SAVORE</div>
+
+    <div class="menu-toggle" id="menuToggle">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <div class="nav-left" id="navLinks">
+        <a href="home.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="menu.html">Menu</a>
+        <a href="gallery.html" >Gallery</a>
+        <a href="contact.html">Contact</a>
+        <a href="reservation.html" class="order-btn">Order Now</a>
+    </div>
+</nav>
+<section class="hero-banner">
+<h2>FINE DINING & LUXURY EXPERIENCE</h2>
+</section>
+
+<div class="wrapper">
+<div class="left">
+<h1>Reserve Your Table</h1>
+<p>Join us for a luxurious dining experience with exquisite cuisine and a cozy ambiance. Book your table now and make your evening memorable.</p>
+
+<form id="reservationForm">
+<div class="row">
+<select id="day">
+<option value="">Select Day</option>
+<option>Sunday</option>
+<option>Monday</option>
+<option>Tuesday</option>
+<option>Wednesday</option>
+<option>Thursday</option>
+<option>Friday</option>
+<option>Saturday</option>
+</select>
+<select id="time">
+<option value="">Select Time</option>
+<option>10:00 AM</option>
+<option>12:00 PM</option>
+<option>02:00 PM</option>
+<option>04:00 PM</option>
+<option>06:00 PM</option>
+<option>08:00 PM</option>
+<option>10:00 PM</option>
+</select>
+</div>
+<input type="text" id="name" placeholder="Full Name">
+<input type="text" id="phone" placeholder="Phone Number">
+<input type="number" id="persons" placeholder="Number of Guests" min="1">
+<input type="submit" value="BOOK NOW">
+</form>
+</div>
+
+<div class="right">
+<img src="https://i.pinimg.com/736x/bc/5d/13/bc5d136307e1f11ea0479d029c72d3ae.jpg">
+</div>
+</div>
+
+<script>
+const form=document.getElementById("reservationForm");
+form.addEventListener("submit",e=>{
+e.preventDefault();
+const day=document.getElementById("day").value;
+const time=document.getElementById("time").value;
+const name=document.getElementById("name").value.trim();
+const phone=document.getElementById("phone").value.trim();
+const persons=document.getElementById("persons").value;
+if(!day||!time||!name||!phone||!persons){alert("Please fill all fields"); return;}
+if(persons<1){alert("Guests must be at least 1"); return;}
+alert("Reservation Confirmed!\n\nName: "+name+"\nDay: "+day+"\nTime: "+time+"\nGuests: "+persons);
+form.reset();
+});
+
+    const toggle = document.getElementById("menuToggle");
+    const nav = document.getElementById("navLinks");
+
+    toggle.addEventListener("click", () => {
+        nav.classList.toggle("active");
+    });
+    
+   
+</script>
+
+</script>
+
+</body>
+</html>
